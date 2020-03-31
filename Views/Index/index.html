@@ -1,1 +1,29 @@
-<h1>HOLA</h1>
+<!---->
+<div class="container">
+    <div class="ro">
+        <div class="col s12 m7">
+            <div class="card">
+                <div class="card-content">
+                    <center>
+                        <h4 class="">INICIAR SESION</h4>
+                    </center>
+                        <form method="post" id="login">
+                            <div class="input-field col s12">
+                                    <input id="email" name="email" class="validate" type="email" required>
+                                    <label for="email" class="error">Email</label>
+                                </div>
+                                <div class="input-fiel col s12">
+                                    <input type="password"name="password" id="password" class="validate"
+                                    minlength="6" maxlength="20" required>
+                                    <label for="password" class="error">Contraseña</label>
+                            </div>
+                        </form>
+                    <center>
+                        <button onclick="loginUser();" id="btnLong" class="waves-effect green accent-3 btn">Iniciar sesion</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
