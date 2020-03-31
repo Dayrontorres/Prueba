@@ -1,0 +1,17 @@
+#activar rewriteEngine
+
+RewriteEngine On
+
+#por aqui se puede buscar las carpetas por la barra del navegador
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+#por aqui se puede buscar los archivos que estan dentro de 
+#las carpetas
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+
