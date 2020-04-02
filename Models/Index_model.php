@@ -3,10 +3,12 @@
 
  {
     function __construct(){
-        $this->indexModel();
+       // $this->indexModel();
+      
     }
-    function indexModel(){
-       
+    function userLogin($email,$password){
+        return $password;
+   
     }
      
  }
