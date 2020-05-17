@@ -1,41 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PRUEBAS ECAES</title>
-    <script src="http://localhost/PROYECTO/Prueba/Resource/js/jquery-3.4.1.min.js"
-    type="text/javascript"></script>
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/jquery-3.4.1.min.js" type="text/javascript"></script>
 
     <script src="http://localhost/PROYECTO/Prueba/Resource/materialize/js/materialize.min.js"
-    type="text/javascript"></script>
+        type="text/javascript"></script>
 
-    <script src="http://localhost/PROYECTO/Prueba/Resource/js/jquery.validate.js"
-    type="text/javascript"></script>
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/jquery.validate.js" type="text/javascript"></script>
 
-    <script src="http://localhost/PROYECTO/Prueba/Resource/js/funciones.js"
-    type="text/javascript"></script>
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/config.js" type="text/javascript"></script>
 
-    <script src="http://localhost/PROYECTO/Prueba/Resource/js/Usuarios.js"
-    type="text/javascript"></script>
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/funciones.js" type="text/javascript"></script>
+
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/Usuarios.js" type="text/javascript"></script>
 
 
-    <script src="http://localhost/PROYECTO/Prueba/Resource/js/app.js"
-    type="text/javascript"></script>
+    <script src="http://localhost/PROYECTO/Prueba/Resource/js/app.js" type="text/javascript"></script>
 
-    <link rel="stylesheet"
-    href="http://localhost/PROYECTO/Prueba/Resource/materialize/css/materialize.min.css">
-    <link rel="stylesheet"
-    href="http://localhost/PROYECTO/Prueba/Resource/css/style.css">
+    <link rel="stylesheet" href="http://localhost/PROYECTO/Prueba/Resource/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="http://localhost/PROYECTO/Prueba/Resource/css/style.css">
 </head>
+
 <body>
     <nav>
         <div class="nav-wrapper green accent-3">
-           <a href='#|' class="brand-logo center">
-            <i class="material-icons">
+            <a href='#|' class="brand-logo center">
+                <i class="material-icons">
 
-            </i>
-            SISTEMA UNIVERSITARIO
-           </a>
+                </i>
+                SISTEMA UNIVERSITARIO
+            </a>
+            <div id="menuNavbar">
+                <ul class="right hide-on-med-and-down">
+
+                    <li>
+                        <a href="/proyecto/Prueba/Usuarios/destroySession" onclick="sessionClose();">salir</a>
+
+
+                    </li>
+
+                </ul>
+                <!---estilos para crear un boton-->
+                <a href="#" data-target="slide-out" class="btn-floating btn-large waves-effect -waves-ligth
+                cyan darken-2 sidenav-trigger"></a>
+
+            </div>
         </div>
     </nav>
+    <ul id="slide-out" class="sidenav">
+        <li>
+            <div class="user-view cyan darken-2">
+                <a href="#!user">
+                    <img id="foto1" class="circle responsive-img valing profile-image" src="" />
+
+                </a>
+                <a href="#">
+                    <span class="" id="name1"></span>
+
+                </a>
+                <a href="#">
+                    <span class="" id="role1"></span>
+
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#" onclick="">Inicio</a>
+        </li>
+        <li>
+            <a href="#" onclick="">Usuarios</a>
+        </li>
+        
+    </ul>

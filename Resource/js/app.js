@@ -10,7 +10,9 @@ var loginUser = () =>{
 }
 
 $().ready(()=>{
-    $("#login").validate()
+    $("#login").validate();
+    //inicializamos sidenav
+    $('.sidenav').sidenav();
 });
 
 

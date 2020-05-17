@@ -13,13 +13,30 @@ class Index extends Controllers
     }
     public function index(){
         //echo"metodo index";
-        $this->view->render($this,"index");
+        //$user=null;
+        //evaluamos si la variable o la llave esta definida
+        //$user= isset($_SESSION["User"]);
+        $user= $_SESSION["User"] ?? null;
+        if (null != $user)  {
+            header("Location:".URL."Principal/principal");
+        } else {
+            $this->view->render($this,"index");
+        }
+        
+        
 
     }
+
     public function userLogin(){
         if(isset($_POST["email"]) && isset($_POST["password"])){
-           echo $this->model->userLogin($_POST["email"],$_POST["password"]);
-
+          // echo password_hash($_POST["password"],PASSWORD_DEFAULT);
+          $data = $this->model->userLogin($_POST["email"],$_POST["password"]);
+          if (is_array($data)) {
+          echo json_encode($data);
+         } else {
+            echo $data;
+         }
+         
 
         }
     }
